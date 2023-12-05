@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
-// import { GeistMono } from 'geist/font/mono';
+import { GeistMono } from "geist/font/mono";
+import clsx from "clsx";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Flareup",
@@ -17,7 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={GeistSans.className}>{children}</body>
+      <body className={clsx(GeistSans.className, GeistMono.variable)}>
+        {children}
+      </body>
     </html>
   );
 }
