@@ -42,10 +42,21 @@ export default function AnimatedMap() {
     <Scrollytelling.Root end="+=500" debug={{ label: "Intro Map" }}>
       <Scrollytelling.Pin childHeight="100vh" pinSpacerHeight="200vh" top={0}>
         <Scrollytelling.Waypoint
+          at={0}
+          onReverseCall={() => {
+            setHeadline(HEADLINES[0]);
+            setActiveMarkers(initialMarkers);
+            mapRef.current?.flyTo({
+              center: [BER_LNG, BER_LAT],
+              zoom: initialViewState.zoom,
+              duration: 6000,
+            });
+          }}
+        />
+        <Scrollytelling.Waypoint
           at={33}
           label="State College transition"
           onCall={() => {
-            console.log("intro trigger");
             setHeadline(HEADLINES[1]);
             mapRef.current?.flyTo({
               center: [SCE_LNG, SCE_LAT],
@@ -61,16 +72,6 @@ export default function AnimatedMap() {
                 },
               ]);
             }, 4000);
-          }}
-          onReverseCall={() => {
-            console.log("reverse intro");
-            setHeadline(HEADLINES[0]);
-            setActiveMarkers(initialMarkers);
-            mapRef.current?.flyTo({
-              center: [BER_LNG, BER_LAT],
-              zoom: initialViewState.zoom,
-              duration: 6000,
-            });
           }}
         />
         <div className="relative h-[200vh] w-screen" ref={rootRef}>
