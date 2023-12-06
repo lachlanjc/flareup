@@ -79,40 +79,40 @@ function Donut({
 
 export default function Exporting() {
   return (
-    <>
-      <Scrollytelling.Root
-        key="distribution"
-        start="top bottom"
-        debug={{ label: "Distribution Marquee" }}
-      >
+    <Scrollytelling.Root
+      start="top bottom"
+      end="bottom top"
+      debug={{ label: "Exporting" }}
+    >
+      <section className="max-w-screen">
         <Marquee>exporting</Marquee>
-      </Scrollytelling.Root>
-      <div className="intro container relative mx-auto my-24 flex flex-col gap-10 text-3xl leading-10 tracking-tight">
-        <Systemic />
-        <div className="absolute -bottom-4 right-0 grid h-[300px] w-[300px] place-content-center">
-          <Donut value={0.4} size={300} className="absolute" />
-          <div className="flex max-w-[220px] flex-col gap-2 text-center">
-            <span className="font-mono text-6xl">40%</span>
-            <span className="font-mono text-base opacity-75">
-              of global fossil fuels are used only to ship more fossil fuels
-            </span>
+        <div className="intro container relative mx-auto mb-24 flex flex-col gap-10 text-3xl leading-10 tracking-tight">
+          <Systemic />
+          <div className="absolute -bottom-4 right-0 grid h-[300px] w-[300px] place-content-center">
+            <Donut value={0.4} size={300} className="absolute" />
+            <div className="flex max-w-[220px] flex-col gap-2 text-center">
+              <span className="font-mono text-6xl">40%</span>
+              <span className="font-mono text-base opacity-75">
+                of global fossil fuels are used only to ship more fossil fuels
+              </span>
+            </div>
           </div>
         </div>
-      </div>
-      <TerminalsMap />
-      <div className="intro container mx-auto flex flex-col gap-10 py-24 text-3xl leading-10 tracking-tight">
-        <Terminals />
-      </div>
-      <div className="grid grid-cols-2 gap-8 px-8">
-        <Image src={imgFacility1} alt="facility 1" placeholder="blur" />
-        <Image src={imgFacility2} alt="facility 2" placeholder="blur" />
-        <Image src={imgInfra} alt="Infrastructure" placeholder="blur" />
-        <Image src={imgTanker} alt="tanker" placeholder="blur" />
-      </div>
+        <TerminalsMap />
+        <div className="intro container mx-auto flex flex-col gap-10 py-24 text-3xl leading-10 tracking-tight">
+          <Terminals />
+        </div>
+        <div className="grid grid-cols-2 gap-8 px-8">
+          <Image src={imgFacility1} alt="facility 1" placeholder="blur" />
+          <Image src={imgFacility2} alt="facility 2" placeholder="blur" />
+          <Image src={imgInfra} alt="Infrastructure" placeholder="blur" />
+          <Image src={imgTanker} alt="tanker" placeholder="blur" />
+        </div>
 
-      <p className="col-span-2 mt-8 text-center font-mono uppercase opacity-75">
-        Photographs by Jon Shapley / Houston Chronicle in Cameron, LA
-      </p>
-    </>
+        <p className="col-span-2 mt-8 text-center font-mono uppercase opacity-75">
+          Photographs by Jon Shapley / Houston Chronicle in Cameron, LA
+        </p>
+      </section>
+    </Scrollytelling.Root>
   );
 }

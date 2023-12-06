@@ -39,7 +39,7 @@ export default function AnimatedMap() {
   const [activeMarkers, setActiveMarkers] = useState<Markers>(initialMarkers);
 
   return (
-    <Scrollytelling.Root key="map" end="+=500" debug={{ label: "Intro Map" }}>
+    <Scrollytelling.Root end="+=500" debug={{ label: "Intro Map" }}>
       <Scrollytelling.Pin childHeight="100vh" pinSpacerHeight="200vh" top={0}>
         <Scrollytelling.Waypoint
           at={33}
