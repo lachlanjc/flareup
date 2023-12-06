@@ -72,6 +72,7 @@ function Donut({
         strokeDashoffset={offset}
         transform="rotate(-90 16 16)"
         style={{ transition: "1s stroke-dashoffset ease 1s" }}
+        className="stroke-accent"
       />
     </svg>
   );

@@ -44,14 +44,14 @@ export default function Consumption() {
               </div>
               <span className="inline-block h-16 w-16 justify-self-center rounded-full bg-black/50" />
               <span
-                className="mono bg-accent inline-block grid h-16 w-16 place-content-center justify-self-center rounded-full font-bold text-white"
-                style={{ transform: "scale(1.23)" }}
+                className="mono bg-accent inline-block grid h-16 w-16 place-content-center justify-self-center rounded-full text-xl text-white"
+                style={{ transform: "scale(1.15)", fontWeight: 600 }}
               >
                 1.2× 
               </span>
               <span
-                className="mono bg-accent inline-block grid h-16 w-16 place-content-center justify-self-center rounded-full font-bold text-white"
-                style={{ transform: "scale(2.74)" }}
+                className="mono bg-accent inline-block grid h-16 w-16 place-content-center justify-self-center rounded-full text-xl text-white"
+                style={{ transform: "scale(1.65)", fontWeight: 525 }}
               >
                 2.7× 
               </span>

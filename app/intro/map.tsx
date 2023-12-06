@@ -99,7 +99,7 @@ export default function AnimatedMap() {
                 style={{ position: "relative" }}
               >
                 <svg
-                  className="fill-current text-red-500"
+                  className="fill-accent"
                   width={32}
                   height={32}
                   viewBox="0 0 24 24"

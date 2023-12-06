@@ -49,7 +49,7 @@ export default function Extraction() {
           <Image src={imgPipeline} alt="Pipeline" placeholder="blur" />
           <Image src={imgTubing} alt="Tubing" placeholder="blur" className="" />
           {/* <Image src={imgCompressor} alt="Compressor" placeholder="blur" /> */}
-          <div className="intro container mx-auto flex flex-col justify-center gap-10 py-8 text-3xl leading-10 tracking-tight">
+          <div className="intro flex flex-col justify-center gap-10 py-8 text-3xl leading-10 tracking-tight">
             <p>
               Pennsylvania saw a massive boom of fracking starting in the late
               2000s, kicked off after a Penn State scientist estimated how much
@@ -60,6 +60,11 @@ export default function Extraction() {
               making it the second largest gas producer in the country. The
               nearest active fracking to my house is <code>15 miles</code> /{" "}
               <code>25 km</code> away. No one told me about that.
+            </p>
+            <p>
+              North and South, states took different paths.
+              <br />
+              New York and Maryland both banned fracking.
             </p>
           </div>
           <figure>
@@ -74,7 +79,6 @@ export default function Extraction() {
               <span>MAP BY FRACTRACKER</span>
             </figcaption>
           </figure>
-
           {/* <Image src={imgWater} alt="Water" placeholder="blur" /> */}
         </div>
       </section>
