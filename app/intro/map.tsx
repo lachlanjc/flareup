@@ -1,6 +1,5 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import * as Scrollytelling from "../scrollytelling-client";
-import { useScrollytelling } from "@bsmnt/scrollytelling";
 
 import Map, { MapRef, Marker, MarkerProps } from "react-map-gl";
 
@@ -29,32 +28,21 @@ const initialMarkers: Markers = [
 
 const HEADLINES = [
   "Here we are, in Berlin.",
-  "I grew up in a small town in the Northeastern U.S. called State College, PA.",
+  "I grew up in a small college town in the Northeastern U.S. called State College, PA.",
 ] as const;
 
 export default function AnimatedMap() {
   const mapRef = useRef<MapRef | null>(null);
   const rootRef = useRef<HTMLDivElement | null>(null);
-  // const { timeline } = useScrollytelling();
 
   const [headline, setHeadline] = useState<string>(HEADLINES[0]);
   const [activeMarkers, setActiveMarkers] = useState<Markers>(initialMarkers);
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     // mapRef.current?.addEventListener(
-  //     //   "scroll",
-  //     //   () => {
-  //     // console.log("setting");
-
-  //   }, 2500);
-  // });
 
   return (
     <Scrollytelling.Root key="map" end="+=500" debug={{ label: "Intro Map" }}>
       <Scrollytelling.Pin childHeight="100vh" pinSpacerHeight="200vh" top={0}>
         <Scrollytelling.Waypoint
-          at={100}
+          at={33}
           label="State College transition"
           onCall={() => {
             console.log("intro trigger");

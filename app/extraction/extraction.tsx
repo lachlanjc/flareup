@@ -13,15 +13,19 @@ import imgWells from "../intro/wells.jpeg";
 
 export default function Extraction() {
   return (
-    <Scrollytelling.Root key="extraction" debug={{ label: "Extraction" }}>
+    <Scrollytelling.Root
+      key="extraction"
+      start="top bottom"
+      debug={{ label: "Extraction" }}
+    >
       <section id="extraction" className="max-w-screen relative">
         <div className="relative -mb-[200px]">
           <Marquee>extraction</Marquee>
         </div>
         <Scrollytelling.Parallax
           tween={{
-            start: 0,
-            end: 50,
+            start: 25,
+            end: 67,
             movementY: { value: -200, unit: "px" },
           }}
         >
@@ -48,7 +52,7 @@ export default function Extraction() {
           <div className="intro container mx-auto flex flex-col justify-center gap-10 py-8 text-3xl leading-10 tracking-tight">
             <p>
               Pennsylvania saw a massive boom of fracking starting in the late
-              2000s, kicked off by a State College scientist estimating how much
+              2000s, kicked off after a Penn State scientist estimated how much
               gas could profitably be unearthed.
             </p>
             <p>

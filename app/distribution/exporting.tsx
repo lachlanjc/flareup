@@ -82,19 +82,19 @@ export default function Exporting() {
     <>
       <Scrollytelling.Root
         key="distribution"
-        start="bottom 10%"
+        start="top bottom"
         debug={{ label: "Distribution Marquee" }}
       >
         <Marquee>exporting</Marquee>
       </Scrollytelling.Root>
       <div className="intro container relative mx-auto my-24 flex flex-col gap-10 text-3xl leading-10 tracking-tight">
         <Systemic />
-        <div className="absolute -bottom-4 right-0 grid h-[256px] w-[256px] place-content-center">
-          <Donut value={0.4} size={256} className="absolute" />
-          <div className="flex max-w-[180px] flex-col gap-2 text-center">
+        <div className="absolute -bottom-4 right-0 grid h-[300px] w-[300px] place-content-center">
+          <Donut value={0.4} size={300} className="absolute" />
+          <div className="flex max-w-[220px] flex-col gap-2 text-center">
             <span className="font-mono text-6xl">40%</span>
             <span className="font-mono text-base opacity-75">
-              of fossil fuels are wasted shipping fossil fuels
+              of global fossil fuels are used only to ship more fossil fuels
             </span>
           </div>
         </div>

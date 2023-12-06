@@ -47,3 +47,7 @@ body {
 .intro code {
   white-space: nowrap;
 }
+
+.intro strong {
+  color: var(--color-orange);
+}

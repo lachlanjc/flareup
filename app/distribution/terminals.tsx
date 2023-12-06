@@ -19,11 +19,11 @@ const STATUS_KEYS = Object.keys(STATUS_COLORS) as Array<
 >;
 
 const HEADLINES = [
-  "Here’s the terminals already exporting.",
+  "Here are the terminals already exporting gas.",
   "Let’s add the terminals under construction.",
   "Now, let’s add the terminals Biden’s administration has approved.",
   "And finally, here’s the terminals that have been proposed.",
-  "One of these proposed terminals is in Pennsylvania. And the industry is planning 25 more on the East Coast.",
+  "One of these proposed terminals is in Philadelphia. And the industry is planning 25 more on the East Coast.",
 ];
 
 const TERMINALS: Array<{
@@ -299,8 +299,8 @@ export default function AnimatedMap() {
 
   return (
     <Scrollytelling.Root debug={{ label: "Terminals Map" }}>
-      <Scrollytelling.Pin childHeight="100vh" pinSpacerHeight="600vh" top={0}>
-        <div className="relative h-[600vh] w-screen" ref={rootRef}>
+      <Scrollytelling.Pin childHeight="100vh" pinSpacerHeight="500vh" top={0}>
+        <div className="relative h-[500vh] w-screen" ref={rootRef}>
           <Scrollytelling.Waypoint
             at={20}
             onCall={() => {
@@ -399,7 +399,7 @@ export default function AnimatedMap() {
             />
             <div className="z-1 absolute bottom-0 left-0 right-0 h-[40vh] bg-gradient-to-b from-transparent to-black/75" />
             <div
-              className="z-2 absolute bottom-12 left-2/4 -translate-x-1/2 text-center tracking-tight text-white md:max-w-2xl "
+              className="z-2 absolute bottom-12 left-2/4 -translate-x-1/2 text-center tracking-tight text-white [text-wrap:balance] md:max-w-3xl"
               style={{ textShadow: "0 2px 4px rgba(0,0,0,0.75)" }}
             >
               <p className="text-lg md:text-4xl">{HEADLINES[visibleStatusI]}</p>
@@ -424,7 +424,7 @@ export default function AnimatedMap() {
               </dl>
             </div>
             <div
-              className="absolute bottom-12 left-12 flex flex-col gap-3 text-white"
+              className="absolute bottom-12 right-12 flex flex-col gap-3 text-white"
               aria-hidden
             >
               <dl>
@@ -432,18 +432,18 @@ export default function AnimatedMap() {
                   .reverse()
                   .map((status, i) => (
                     <div
-                      className={`flex items-center gap-2 transition-opacity ${
+                      className={`flex items-center justify-end gap-2 transition-opacity ${
                         STATUS_KEYS.length - (visibleStatusI + 1) <= i
                           ? "opacity-1"
                           : "opacity-0"
                       }`}
                     >
+                      <dd className="capitalize">{status.replace("-", " ")}</dd>
                       <div
                         className={`h-4 w-4 rounded-full bg-${
                           STATUS_COLORS[status as keyof typeof STATUS_COLORS]
                         }-500`}
                       />
-                      <dd className="capitalize">{status.replace("-", " ")}</dd>
                     </div>
                   ))}
               </dl>

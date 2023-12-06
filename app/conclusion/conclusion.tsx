@@ -5,7 +5,7 @@ import imgDispersion from "./dispersion.jpg";
 
 export default function Conclusion() {
   return (
-    <Scrollytelling.Root start="bottom 10%" debug={{ label: "Conclusion" }}>
+    <Scrollytelling.Root start="top bottom" debug={{ label: "Conclusion" }}>
       <section className="max-w-screen relative overflow-y-hidden">
         {/* <Scrollytelling.Parallax
           tween={{
@@ -21,9 +21,10 @@ export default function Conclusion() {
           style={{ objectPosition: "50% center" }}
           id="dispersion"
         />
+        <div className="absolute left-0 right-0 top-0 h-[256px] bg-gradient-to-b from-white to-white/0" />
         {/* </Scrollytelling.Parallax> */}
         <div className="max-w-screen relative w-full bg-gradient-to-b from-transparent to-black/75">
-          <div className="intro container relative mx-auto flex flex-col gap-10 pb-24 pt-[512px] text-3xl leading-10 tracking-tight">
+          <div className="intro container relative mx-auto flex flex-col gap-10 pb-24 pt-[850px] text-3xl leading-10 tracking-tight">
             <Copy />
           </div>
         </div>

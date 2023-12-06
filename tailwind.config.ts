@@ -17,6 +17,9 @@ const config: Config = {
         sans: ["var(--font-geist-sans)"],
         mono: ["var(--font-geist-mono)"],
       },
+      colors: {
+        accent: "var(--color-orange)",
+      },
     },
   },
   plugins: [],
