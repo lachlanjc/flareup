@@ -39,11 +39,12 @@ function Marquee({
   orange,
   className,
   children,
-}: PropsWithChildren<{
+}: {
   reverse?: boolean;
   orange?: boolean;
   className?: string;
-}>) {
+  children: string;
+}) {
   return (
     <div
       className={clsx(s.marqueeContainer, className)}
