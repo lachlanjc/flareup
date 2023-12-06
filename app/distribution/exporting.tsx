@@ -86,9 +86,9 @@ export default function Exporting() {
     >
       <section className="max-w-screen">
         <Marquee>exporting</Marquee>
-        <div className="intro container relative mx-auto mb-24 flex flex-col gap-10 text-3xl leading-10 tracking-tight">
+        <div className="intro container relative mx-auto mb-36 flex flex-col gap-10 text-3xl leading-10 tracking-tight">
           <Systemic />
-          <div className="absolute -bottom-4 right-0 grid h-[300px] w-[300px] place-content-center">
+          <div className="absolute -bottom-12 right-0 grid h-[300px] w-[300px] place-content-center">
             <Donut value={0.4} size={300} className="absolute" />
             <div className="flex max-w-[220px] flex-col gap-2 text-center">
               <span className="font-mono text-6xl">40%</span>

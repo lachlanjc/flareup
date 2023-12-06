@@ -50,4 +50,5 @@ body {
 
 .intro strong {
   color: var(--color-orange);
+  font-weight: 650;
 }
