@@ -6,10 +6,13 @@ import imgDispersion from "./dispersion.jpg";
 export default function Conclusion() {
   return (
     <Scrollytelling.Root start="top bottom" debug={{ label: "Conclusion" }}>
-      <section className="max-w-screen relative overflow-y-hidden pb-[640px] pt-[320px]">
+      <section
+        id="conclusion"
+        className="max-w-screen relative overflow-y-hidden pb-[640px] pt-[320px]"
+      >
         <Scrollytelling.Parallax
           tween={{
-            start: 67,
+            start: 25,
             end: 100,
             movementY: { value: 320, unit: "px" },
           }}
@@ -24,15 +27,19 @@ export default function Conclusion() {
         <div className="absolute left-0 right-0 top-0 h-[240px] bg-gradient-to-b from-white to-white/0 mix-blend-overlay" />
         <div className="max-w-screen relative w-full bg-gradient-to-b from-transparent to-black/0">
           <div
-            className="intro container relative mx-auto flex flex-col gap-10 pb-24 pt-[530px] text-3xl leading-10 tracking-tight"
+            className="intro relative mx-auto flex flex-col gap-10 pb-24 pt-[240px] text-3xl leading-10 tracking-tight"
             style={{
+              maxWidth: 768,
               textShadow: "0 1px 3px rgba(0,0,0,1),0 2px 8px rgba(0,0,0,0.8)",
             }}
           >
             <Copy />
           </div>
         </div>
-        <p className="absolute bottom-12 right-12 font-mono uppercase">
+        <p
+          className="absolute bottom-12 right-12 font-mono uppercase"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
           Artwork by Christopher Campbell
         </p>
       </section>

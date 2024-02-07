@@ -7,17 +7,19 @@
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
 
-  --color-orange: #ff4921;
-  --color-red: #da1711;
+  --color-red: #ff4921;
+  --color-orange: #f56900;
   --color-environment-green: #00de65;
   --color-carbon-green: #00d959;
 }
 
+/*
 @supports (color: color(display-p3 1 1 1)) {
   :root {
-    --color-orange: color(display-p3 1 0.356 0.2183);
+    --color-red: color(display-p3 1 0.356 0.2183);
   }
 }
+*/
 
 html {
   line-height: 1.5;
@@ -51,4 +53,8 @@ body {
 .intro strong {
   color: var(--color-orange);
   font-weight: 650;
+}
+
+div[class^="_root_"] {
+  display: none !important;
 }

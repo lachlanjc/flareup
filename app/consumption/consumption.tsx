@@ -5,13 +5,16 @@ import * as Scrollytelling from "../scrollytelling-client";
 export default function Consumption() {
   return (
     <Scrollytelling.Root start="top bottom" debug={{ label: "Consumption" }}>
-      <section className="max-w-screen relative mt-24 overflow-y-hidden">
+      <section
+        id="consumption"
+        className="max-w-screen relative mt-24 overflow-y-hidden"
+      >
         <Marquee>importing</Marquee>
-        <div className="intro container mx-auto mb-24 flex flex-col gap-10 text-3xl leading-10 tracking-tight">
+        <div className="intro container mx-auto my-24 flex flex-col gap-10 text-3xl leading-10 tracking-tight">
           <Copy />
         </div>
         <footer className="w-full bg-white py-24 text-black">
-          <div className="container mx-auto">
+          <div className="bridge container mx-auto px-24">
             <p
               className="mb-10 text-3xl leading-10 tracking-tight"
               style={{ maxWidth: "38ch" }}

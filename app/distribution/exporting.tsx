@@ -85,7 +85,7 @@ export default function Exporting() {
       end="bottom top"
       debug={{ label: "Exporting" }}
     >
-      <section className="max-w-screen">
+      <section id="exporting" className="max-w-screen">
         <Marquee>exporting</Marquee>
         <div className="intro container relative mx-auto mb-36 flex flex-col gap-10 text-3xl leading-10 tracking-tight">
           <Systemic />
@@ -94,7 +94,7 @@ export default function Exporting() {
             <div className="flex max-w-[220px] flex-col gap-2 text-center">
               <span className="font-mono text-6xl">40%</span>
               <span className="font-mono text-base opacity-75">
-                of global fossil fuels are used only to ship more fossil fuels
+                of global shipping is shipping fossil fuels
               </span>
             </div>
           </div>

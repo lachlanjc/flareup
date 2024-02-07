@@ -7,7 +7,7 @@ import * as Scrollytelling from "../scrollytelling-client";
 export default function MarqueeSection({ children }: { children: string }) {
   return (
     <div
-      className="max-w-screen relative h-[40vh] overflow-x-hidden overflow-y-visible bg-black"
+      className="marquee max-w-screen relative h-[40vh] overflow-x-hidden overflow-y-visible bg-black"
       id={children}
     >
       <div className={s.marquees}>

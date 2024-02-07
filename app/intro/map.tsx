@@ -49,7 +49,7 @@ export default function AnimatedMap() {
             mapRef.current?.flyTo({
               center: [BER_LNG, BER_LAT],
               zoom: initialViewState.zoom,
-              duration: 6000,
+              duration: 1000,
             });
           }}
         />
@@ -116,7 +116,7 @@ export default function AnimatedMap() {
             ))}
             <div className="z-1 absolute bottom-0 left-0 right-0 h-[25vh] bg-gradient-to-b from-transparent to-black/75" />
             <h2
-              className="z-2 absolute bottom-16 left-2/4 -translate-x-1/2 text-center text-lg tracking-tight text-white md:max-w-2xl md:text-4xl"
+              className="z-2 absolute bottom-16 left-2/4 -translate-x-1/2 text-center text-lg tracking-tight text-white [text-wrap:balance] md:max-w-3xl md:text-4xl"
               style={{ textShadow: "0 2px 4px rgba(0,0,0,0.75)" }}
             >
               {headline}
